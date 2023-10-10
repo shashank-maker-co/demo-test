@@ -1,0 +1,17 @@
+{
+  "name": "checks-playwright",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {},
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "devDependencies": {
+    "@playwright/test": "^1.33.0",
+    "chai": "^4.3.7",
+    "checkly": "^4.0.13",
+    "ts-node": "^10.9.1",
+    "typescript": "^5.0.0"
+  }
+}
