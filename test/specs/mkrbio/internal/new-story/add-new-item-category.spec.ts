@@ -9,9 +9,7 @@ let storePage: StorePage;
 let previewPage: PreviewPage
 let executionConfig: any;
 let commonFunction: CommonFunction;
-test.beforeAll(async () => {
 
-})
 test.beforeEach(async ({ page }) => {
     test.setTimeout(60000)
     basePage = new BasePage(page);
