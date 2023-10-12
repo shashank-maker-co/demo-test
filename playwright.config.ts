@@ -21,7 +21,7 @@ export default defineConfig({
     : 0,
   /* Opt out of parallel tests on CI. */
   workers: process.env.CI ? 6 : 6,
-  reporter: 'html',
+  reporter: [['junit', { outputFile: 'results.xml' }]],
   use: {
     ...devices[process.env.DEVICE_NAME || 'Desktop Chrome'],
     // viewport: { width: 1200, height: 800 },

@@ -15,7 +15,8 @@ test.beforeAll(async () => {
 test.beforeEach(async ({ page }) => {
     test.setTimeout(60000)
     basePage = new BasePage(page);
-    previewPage = new PreviewPage(page); await basePage.gotoUrl('https://dev.maker.co/');
+    previewPage = new PreviewPage(page);
+    await basePage.gotoUrl('https://dev.maker.co/');
 });
 
 test.afterAll(async () => {
