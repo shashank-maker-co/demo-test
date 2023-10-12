@@ -24,7 +24,7 @@ const config: PlaywrightTestConfig = {
       args: ["--start-maximized"],
       slowMo: process.env.SLOW_MO ? parseInt(process.env.SLOW_MO) : 0,
     },
-    screenshot: process.env.ENVIRONMENT_NAME === 'preview' || process.env.ENVIRONMENT_NAME === 'production'
+    screenshot: process.env.CI
       ? 'only-on-failure'
       : 'only-on-failure',
 
@@ -36,9 +36,13 @@ const config: PlaywrightTestConfig = {
     // baseURL: 'http://localhost:3000',
 
     /* Collect trace when retrying the failed test. See https://playwright.dev/docs/trace-viewer */
-    trace: 'on',
+    trace: process.env.CI
+      ? 'retain-on-failure'
+      : 'on',
     video: {
-      mode: 'on',
+      mode: process.env.CI
+        ? 'retain-on-failure'
+        : 'on',
       size: { width: 1100, height: 800 }
     },
 
