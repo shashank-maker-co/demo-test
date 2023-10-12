@@ -1,7 +1,7 @@
 import { defineConfig } from 'checkly'
 
 export default defineConfig({
-    projectName: 'checks playwright',
+    projectName: 'Playwright Checks Pages',
     logicalId: 'website-monitoring-1',
     repoUrl: 'https://github.com/shashank-maker-co/checks-playwright',
     checks: {
