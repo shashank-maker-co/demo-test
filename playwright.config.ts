@@ -29,10 +29,6 @@ export default defineConfig({
       args: ["--start-maximized"],
       slowMo: process.env.SLOW_MO ? parseInt(process.env.SLOW_MO) : 0,
     },
-    screenshot: process.env.ENVIRONMENT_NAME === 'preview' || process.env.ENVIRONMENT_NAME === 'production'
-      ? 'only-on-failure'
-      : 'only-on-failure',
-
     headless: true,
     /* Maximum time each action such as `click()` can take. Defaults to 0 (no limit). */
     actionTimeout: 15000,
@@ -41,11 +37,12 @@ export default defineConfig({
     // baseURL: 'http://localhost:3000',
 
     /* Collect trace when retrying the failed test. See https://playwright.dev/docs/trace-viewer */
-    trace: 'on',
+    trace: process.env.CI ? 'off' : 'on',
     video: {
-      mode: 'on',
+      mode: process.env.CI ? 'off' : 'on',
       size: { width: 1100, height: 800 }
     },
+    screenshot: process.env.CI ? 'off' : 'only-on-failure',
 
   },
 
