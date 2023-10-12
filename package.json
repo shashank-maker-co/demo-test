@@ -13,5 +13,8 @@
     "checkly": "^4.0.13",
     "ts-node": "^10.9.1",
     "typescript": "^5.0.0"
+  },
+  "dependencies": {
+    "url-parse": "^1.5.10"
   }
 }
