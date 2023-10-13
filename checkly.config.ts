@@ -1,5 +1,4 @@
 import { defineConfig } from 'checkly'
-import { env } from './env'
 export default defineConfig({
     projectName: 'checks playwright',
     logicalId: 'website-monitoring-1',
