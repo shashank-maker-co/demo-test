@@ -2,7 +2,7 @@ import { defineConfig } from 'checkly'
 export default defineConfig({
     projectName: 'checks playwright',
     logicalId: 'website-monitoring-1',
-    repoUrl: process.env.CIRCLE_BUILD_URL || 'https://github.com/shashank-maker-co/checks-playwright',
+    repoUrl: process.env.CIRCLE_BUILD_URL || 'Local run from-https://github.com/shashank-maker-co/checks-playwright',
     checks: {
         activated: true,
         muted: false,
