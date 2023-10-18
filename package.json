@@ -10,7 +10,7 @@
   "devDependencies": {
     "@playwright/test": "^1.38.1",
     "chai": "^4.3.7",
-    "checkly": "^4.0.13",
+    "checkly": "^4.2.0",
     "ts-node": "^10.9.1",
     "typescript": "^5.0.0"
   },
